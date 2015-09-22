@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  BiblioID: MyString
+  Title: MyString
+  Author: MyString
+  YearOfPub: 2015-09-22
+  Source: MyString
+
+two:
+  BiblioID: MyString
+  Title: MyString
+  Author: MyString
+  YearOfPub: 2015-09-22
+  Source: MyString
