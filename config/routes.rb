@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
+  get 'biblios/index'
+
+  get 'biblios/new'
+
+  get 'biblios/show'
+
+  get 'index/new'
+
+  get 'index/show'
+
+  get 'index/delete'
+
   get 'welcome/homepage'
+
   resources :users
   resources :log_books
   resources :descriptions
