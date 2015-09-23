@@ -1,4 +1,4 @@
 class Raiting < ActiveRecord::Base
-    attr_accessible :BiblioID, :UserID, :Rating
-    belongs_to :biblio
+#    attr_accessible :BiblioID, :UserID, :Rating
+ #   belongs_to :biblio
 end
