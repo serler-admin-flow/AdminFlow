@@ -1,9 +1,32 @@
 Rails.application.routes.draw do
+  get 'biblios/index'
+
+  get 'biblios/new'
+
+  get 'biblios/show'
+
+  get 'index/new'
+
+  get 'index/show'
+
+  get 'index/delete'
+
+  get 'welcome/homepage'
+
+  resources :users
+  resources :log_books
+  resources :descriptions
+  resources :biblios
+  resources :email_configs
+  resources :moderator_cls
+  resources :evidences
+  resources :raitings
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+ root 'welcome#homepage'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

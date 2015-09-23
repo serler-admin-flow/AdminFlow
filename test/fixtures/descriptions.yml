@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Status: MyString
+  ModeratedBy: MyString
+  ModeratedTime: MyString
+  AnalyzedBy: MyString
+  ModeratedTime_2: 2015-09-22 11:31:02
+
+two:
+  Status: MyString
+  ModeratedBy: MyString
+  ModeratedTime: MyString
+  AnalyzedBy: MyString
+  ModeratedTime_2: 2015-09-22 11:31:02
