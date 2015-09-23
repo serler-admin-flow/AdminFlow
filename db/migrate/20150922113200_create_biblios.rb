@@ -9,7 +9,7 @@ class CreateBiblios < ActiveRecord::Migration
       t.string :PublisherName
       t.date :DOI
       t.integer :VolumeNo
-      t.integer :PageNo
+      t.string :PageNo
       t.string :WebsiteName
       t.string :URL
       t.datetime :LastAccessedDate

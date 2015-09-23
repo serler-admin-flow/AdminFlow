@@ -1,0 +1,10 @@
+<h1>Bibliography Information</h1>
+<p>Form for Bibliography Information</p>
+
+<% @biblios.each_do |biblio| %>
+    <h2><%= biblio.title %></h2>
+    <p><%= biblio.author %></p>
+    <hr>
+<% end %>
+
+
