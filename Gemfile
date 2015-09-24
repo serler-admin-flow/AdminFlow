@@ -4,7 +4,8 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-
+# add rspec 
+gem 'rspec-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
