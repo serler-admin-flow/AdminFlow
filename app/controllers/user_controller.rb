@@ -6,15 +6,13 @@ class UserController < ApplicationController
   def create
       @user = User.new(params[:user])
       if @user.save
-        redirect_to user_path, notice: 'User was successfully created.'
-        #flash[:notice] = "You signed up successfully"
-        #flash[:color]= "valid"
+        flash[:notice] = "You signed up successfully"
+        flash[:color]= "valid"
       else
-        render "new"
-        #flash[:notice] = "Form is invalid"
-        #flash[:color]= "invalid"
+        flash[:notice] = "Form is invalid"
+        flash[:color]= "invalid"
     end
-    
+    #render "new" <<caused mis-routing.
   end
   
   def show
