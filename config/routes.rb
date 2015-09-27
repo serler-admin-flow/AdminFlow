@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'user/new'
-  get 'user/login'
-  get 'user/logout'
-  get 'user/create'
-  get 'user/show'
+  get 'users/new'
+  get 'users/login'
+  get 'users/logout'
+  get 'users/create'
+  get 'users/show'
 
   get 'biblios/index'
   get 'biblios/new'

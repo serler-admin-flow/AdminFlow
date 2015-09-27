@@ -3,8 +3,8 @@ class WelcomeController < ApplicationController
     
   end
   
-  def user
-    
+  def login
+    @login = login.html.erb
   end 
   
   def biblio

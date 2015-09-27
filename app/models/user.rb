@@ -10,21 +10,21 @@ class User < ActiveRecord::Base
     end
     
     #required variables from user db table
-    attr_accessible :UserName, :UserEmailID, :UserPassword, :password_confirmation
+    attr_accessible :user_name, :user_email_id, :user_password, :password_confirmation
     
     #variables
-    attr_accessor :UserPassword
+    attr_accessor :user_password
     EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     
     #validations for user submission  
-    validates :UserName, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
-    validates :UserEmailID, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
-    validates :UserPassword, :confirmation => true #password_confirmation attr
-    validates_length_of :UserPassword, :in => 6..20, :on => :create
+    validates :user_name, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
+    validates :user_email_id, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
+    validates :user_password, :confirmation => true #password_confirmation attr
+    validates_length_of :user_password, :in => 6..20, :on => :create
     
     #basic salt for p/w
-    salt= Digest::SHA1.hexdigest("# We add {UserEmailID} as unique value and #{Time.now} as random value")
-    UserPassword= Digest::SHA1.hexdigest("Adding #{salt} to {UserPassword}")
+    salt= Digest::SHA1.hexdigest("# We add {user_email_id} as unique value and #{Time.now} as random value")
+    encrypted_password= Digest::SHA1.hexdigest("Adding #{salt} to {user_password}")
     
     #save salted p/w and clear data
     before_save :encrypt_password
