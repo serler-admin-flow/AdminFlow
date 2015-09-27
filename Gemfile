@@ -1,11 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap-sass', '~> 3.3.5'
-gem 'carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-# add rspec 
-gem 'rspec-rails'
 # add protected variables
 gem 'protected_attributes'
 # Use SCSS for stylesheets
@@ -36,27 +32,28 @@ gem 'haml-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#unique gems added for layout preferences
+gem 'bootstrap-sass'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  
-
-  gem 'cucumber-rails'
+  # add rspec 
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'database_cleaner'
-  
+end
+group :test do
+    gem 'cucumber-rails'
 end
 
 group :production do
   gem 'pg'
-  
   gem 'rails_12factor'
-  
 end

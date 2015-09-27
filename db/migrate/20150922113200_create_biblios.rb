@@ -1,24 +1,24 @@
 class CreateBiblios < ActiveRecord::Migration
   def change
     create_table :biblios do |t|
-      t.string :BiblioID
-      t.string :Title
-      t.string :Author
-      t.date :YearOfPub
-      t.string :Source
-      t.string :PublisherName
-      t.date :DOI
-      t.integer :VolumeNo
-      t.string :PageNo
-      t.string :WebsiteName
-      t.string :URL
-      t.datetime :LastAccessedDate
-      t.string :EvidenceID
-      t.string :Status_2
-      t.string :StatusID
-      t.datetime :TimeStamp
-      t.integer :Rating
-      t.string :Comments
+      t.string :biblio_id
+      t.string :title
+      t.string :author
+      t.date :year_of_pub
+      t.string :source
+      t.string :publisher_name
+      t.date :doi
+      t.integer :volume_no
+      t.string :page_no
+      t.string :website_name
+      t.string :url
+      t.datetime :last_accessed_date
+      t.string :evidence_id
+      t.string :status_2
+      t.string :status_id
+      t.datetime :time_stamp
+      t.integer :rating
+      t.string :comments
 
       t.timestamps null: false
     end

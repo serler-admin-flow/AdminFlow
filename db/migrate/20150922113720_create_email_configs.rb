@@ -1,10 +1,10 @@
 class CreateEmailConfigs < ActiveRecord::Migration
   def change
     create_table :email_configs do |t|
-      t.string :EmailID
-      t.string :ModeratorThresh
-      t.string :AnalystThresh
-      t.datetime :LastUpdate
+      t.string :email_id
+      t.string :moderator_thresh
+      t.string :analyst_thresh
+      t.datetime :last_update
 
       t.timestamps null: false
     end

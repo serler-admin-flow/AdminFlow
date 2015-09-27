@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150922114007) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "biblios", force: :cascade do |t|
     t.string   "BiblioID"
     t.string   "Title"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150922114007) do
     t.string   "PublisherName"
     t.date     "DOI"
     t.integer  "VolumeNo"
-    t.integer  "PageNo"
+    t.string   "PageNo"
     t.string   "WebsiteName"
     t.string   "URL"
     t.datetime "LastAccessedDate"
@@ -89,6 +92,7 @@ ActiveRecord::Schema.define(version: 20150922114007) do
     t.string   "UserName"
     t.string   "UserEmailID"
     t.string   "UserPassword"
+    t.string   "Salt"
     t.string   "UserRole"
     t.string   "UserOrganisation"
     t.datetime "created_at",       null: false

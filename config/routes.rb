@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :email_configs
   resources :moderator_cls
   resources :evidences
-  resources :raitings
+  resources :ratings
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
