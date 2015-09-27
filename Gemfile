@@ -26,14 +26,19 @@ gem 'haml-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Rails stuff that i like to use
+gem 'simple_form'
+gem 'rails-footnotes', '>= 3.7.9', :group => :development
+#unique gems added for layout preferences
+gem 'bootstrap-sass', '~> 2.3.1.0'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#unique gems added for layout preferences
-gem 'bootstrap-sass'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

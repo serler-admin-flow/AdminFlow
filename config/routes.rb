@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'index/delete'
   get 'welcome/homepage'
   
+  get 'session/new'
+  
   resources :users
   resources :log_books
   resources :descriptions
