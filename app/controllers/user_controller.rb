@@ -12,7 +12,7 @@ class UserController < ApplicationController
         flash[:notice] = "Form is invalid"
         flash[:color]= "invalid"
     end
-    #render "new" <<caused mis-routing.
+    render "new"
   end
   
   def show

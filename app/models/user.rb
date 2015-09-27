@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
     
     #basic salt for p/w
     salt= Digest::SHA1.hexdigest("# We add {UserEmailID} as unique value and #{Time.now} as random value")
-    encrypted_password= Digest::SHA1.hexdigest("Adding #{salt} to {UserPassword}")
+    UserPassword= Digest::SHA1.hexdigest("Adding #{salt} to {UserPassword}")
     
     #save salted p/w and clear data
     before_save :encrypt_password

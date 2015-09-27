@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :UserName
       t.string :UserEmailID
       t.string :UserPassword
-      t.string :salt
+      t.string :Salt
       t.string :UserRole
       t.string :UserOrganisation
 
