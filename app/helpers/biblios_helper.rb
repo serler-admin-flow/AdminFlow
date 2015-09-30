@@ -1,2 +1,0 @@
-module BibliosHelper
-end

@@ -1,32 +1,12 @@
 Rails.application.routes.draw do
-  get 'user/new'
-  get 'user/login'
-  get 'user/logout'
-  get 'user/create'
-  get 'user/show'
 
-  get 'biblios/index'
-  get 'biblios/new'
-  get 'biblios/show'
-  get 'index/new'
-  get 'index/show'
-  get 'index/delete'
-  get 'welcome/homepage'
-  
+  devise_for :users
   resources :users
-  resources :log_books
-  resources :descriptions
-  resources :biblios
-  resources :email_configs
-  resources :moderator_cls
-  resources :evidences
-  resources :raitings
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
- root 'welcome#homepage'
+  root to: 'visitors#index'
  
 
   # Example of regular route:
