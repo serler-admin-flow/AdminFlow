@@ -56,7 +56,7 @@ group :development, :test do
   gem 'database_cleaner'
 end
 group :test do
-    gem 'cucumber-rails'
+    gem 'cucumber-rails', :require => false
 end
 
 group :production do
