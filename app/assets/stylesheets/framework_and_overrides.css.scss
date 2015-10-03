@@ -11,6 +11,27 @@ img {
 .navbar-brand {
   font-size: inherit;
   }
+@media (min-width: 1024px)
+{
+.navbar-nav {
+  float:right;
+  padding-top: 10px;
+}
+.navbar-inverse .navbar-nav > li > a {
+  font-size:14px;
+  padding-right:20px;
+  color: #bbb;
+}
+}
+
+.navbar-nav > li > a {
+  font-size:14px;
+  padding-right:20px;
+  color: #bbb;
+}
+.navbar-collapse {
+  padding-top: 20px;
+}
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
@@ -35,15 +56,24 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
+  margin-top: 100px; // accommodate the navbar
   }
+.min-height {
+  min-height: 493px;
+}
 section {
   @extend .row;
   margin-top: 20px;
   }
+.navbar-inverse {
+  background-color: #000;
+}
+body {
+  background-color: #eee;
+
+}
 
 // Styles for form views
 // using Bootstrap
@@ -79,4 +109,11 @@ section {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-xs;
+}
+footer{
+  background-color: #000;
+  padding:20px;
+  color: #bbb;
+  font-size: 14px;
+  margin: 0px;
 }

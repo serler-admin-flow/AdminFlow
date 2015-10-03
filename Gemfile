@@ -31,7 +31,7 @@ gem 'simple_form'
 gem 'rails-footnotes', '>= 3.7.9', :group => :development
 #unique gems added for layout preferences
 gem 'devise'
-gem 'bootstrap-sass', '3.2.0.2'
+gem 'bootstrap-sass'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
