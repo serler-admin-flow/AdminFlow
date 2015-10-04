@@ -93,8 +93,17 @@ body {
 }
 .authform .button {
   @extend .btn;
-  @extend .btn-primary;
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
 }
+.authform .button:hover {
+  @extend .btn;
+  color: #fff;
+  background-color: #71c000;
+  border-color: #71c000;
+}
+
 .authform fieldset {
   @extend .well;
 }
