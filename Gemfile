@@ -51,11 +51,13 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   # add rspec 
-  gem 'rspec-rails'
+  gem 'rspec-rails', ">= 2.0.1"
   gem 'factory_girl_rails'
+  gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'rails_layout'
   gem 'capybara'
+  gem 'pg'
 end
 
 
