@@ -1,6 +1,9 @@
 language: ruby
 sudo: false
-script: 'ci/travis.rb'
+script: 
+script:
+- export RAILS_ENV=test
+- bundle exec rspec
 before_install:
   - gem install bundler
   - "rm ${BUNDLE_GEMFILE}.lock"
