@@ -6,9 +6,11 @@ development:
   password: yP-0eTWMMGXVLW8biKpJozjYmH
   database: d855ml6rvj5pj2
 
-test:
+test: &test
   adapter: postgresql
   host: ec2-54-204-30-115.compute-1.amazonaws.com
   username: rvbqjsngkgjwsm
   password: yP-0eTWMMGXVLW8biKpJozjYmH
   database: d855ml6rvj5pj2
+cucumber:
+  <<: *test
