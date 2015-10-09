@@ -14,7 +14,7 @@ When /^I press "([^\"]*)"$/ do |button|
 end
 
 When /^I click "([^\"]*)"$/ do |link|
-  click_link(link)
+  click_link link
 end
 
 When /^I fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
@@ -45,6 +45,10 @@ end
 
 When /^I choose "([^\"]*)"$/ do |field|
   choose(field)
+end
+
+When /^I sign out$/ do |f|
+  click_link 'Sign out'
 end
 
 Then /^I should see "([^\"]*)"$/ do |text|
@@ -91,4 +95,15 @@ end
 
 Then /^page should (.+) stating "([^\"]*)"$/ do |type, text|
   expect(page).to have_content 'Welcome'
+end
+
+Given(/^I have an account with username "(.*?)"$/) do |username|
+  visit '/users/sign_up'
+  fill_in('Name', :with => "John")
+  fill_in('Email', :with => username)
+  fill_in('Password', :with => username)
+  fill_in('Confirmation', :with => username)
+  click_button("Sign up")
+#  current_path.should == path_to('homepage')
+  click_link 'Sign out'
 end

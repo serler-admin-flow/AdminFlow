@@ -2,10 +2,13 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
  
-  when /the homepage/
+  when /homepage/
     root_path
   when /the signup page/
     '/users/sign_up'
+    
+  when /signin page/
+    '/users/sign_in'
     #devise/registrations#new
     #new_user_registration
     #users/sign_up
