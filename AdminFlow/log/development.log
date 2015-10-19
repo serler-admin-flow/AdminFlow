@@ -785,3 +785,5 @@ Processing by Devise::RegistrationsController#edit as HTML
   Rendered layouts/_navigation.html.erb (9.6ms)
   Rendered layouts/_messages.html.erb (0.5ms)
 Completed 200 OK in 250ms (Views: 245.7ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "user@example.com"]]
