@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  EmailID: MyString
+  ModeratorThresh: MyString
+  AnalystThresh: MyString
+  LastUpdate: 2015-09-22 11:37:20
+
+two:
+  EmailID: MyString
+  ModeratorThresh: MyString
+  AnalystThresh: MyString
+  LastUpdate: 2015-09-22 11:37:20

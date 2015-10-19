@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  LogBookID: MyString
+  LoginTime: 2015-09-22 11:29:17
+  LogoutTime: 2015-09-22 11:29:17
+  IPAddress: 1
+
+two:
+  LogBookID: MyString
+  LoginTime: 2015-09-22 11:29:17
+  LogoutTime: 2015-09-22 11:29:17
+  IPAddress: 1
