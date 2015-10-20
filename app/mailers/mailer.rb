@@ -8,4 +8,6 @@ class Mailer < ActionMailer::Base
     @token = authenticity_token
     mail(to: @user.email, subject: "SERLER Account activation")
  end
+ 
+ 
 end

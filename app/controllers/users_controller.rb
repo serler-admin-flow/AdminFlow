@@ -33,6 +33,17 @@ class UsersController < ApplicationController
     user.destroy
     redirect_to users_path, :notice => "User deleted."
   end
+  
+  def activate
+    if @user = User.load_from_activation_token(params[:id])
+      @user.activate!
+      flash[:success] = 'User was successfully activated.'
+      redirect_to log_in_path
+    else
+      flash[:warning] = 'Cannot activate this user.'
+      redirect_to root_path
+    end
+  end
 
   private
 
@@ -43,7 +54,8 @@ class UsersController < ApplicationController
   end
 
   def secure_params
-    params.require(:user).permit(:role)
+    params.require(:user).permit(:role, :name, :university)
   end
+  
 
 end
