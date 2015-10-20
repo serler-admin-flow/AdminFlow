@@ -19,6 +19,7 @@ Feature: User Registration using Email Id
 #        Given I have an account with username "udit@serler.com"
         And I am on the signup page
         And I fill in "Name" with "udit"
+        And I fill in "University" with "Auckland University of Technology"
         And I fill in "Email" with "udit@serler.com"
         And I fill in "Password" with "abcdefgh"
         And I fill in "Confirmation" with "abcdefgh"

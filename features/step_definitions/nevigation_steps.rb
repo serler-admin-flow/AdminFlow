@@ -101,6 +101,7 @@ Given(/^I have an account with username "(.*?)"$/) do |username|
   visit '/users/sign_up'
   fill_in('Name', :with => "John")
   fill_in('Email', :with => username)
+  fill_in('University', :with => "AUT university")
   fill_in('Password', :with => username)
   fill_in('Confirmation', :with => username)
   click_button("Sign up")
