@@ -33,6 +33,7 @@ class UsersController < ApplicationController
     user.destroy
     redirect_to users_path, :notice => "User deleted."
   end
+  
 
   private
 
@@ -45,5 +46,6 @@ class UsersController < ApplicationController
   def secure_params
     params.require(:user).permit(:role)
   end
+  
 
 end

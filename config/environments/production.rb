@@ -79,4 +79,13 @@ Rails.application.configure do
   
   # enable heroku to precompile the assets at deploy time
   config.assets.initialize_on_precompile = false
+  config.action_mailer.smtp_settings = {
+  address: "smtp.gmail.com",
+  port: 587,
+  domain: "gmail.com",
+  authentication: "plain",
+  enable_starttls_auto: true,
+  user_name: 'serlergamma@gmail.com',
+  password: 'teamgamma'
+}
 end
