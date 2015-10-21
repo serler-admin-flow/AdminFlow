@@ -80,5 +80,10 @@ Rails.application.configure do
   # enable heroku to precompile the assets at deploy time
   config.assets.initialize_on_precompile = false
   
+     # Don't care if the mailer can't send.
+  config.action_mailer.default_url_options = { :host => 'https://serler-admin-flow.herokuapp.com/' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  
 
 end
