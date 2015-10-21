@@ -4,23 +4,23 @@
     <%= devise_error_messages! %>
     <div class="form-group">
       <%= f.label :name %>
-      <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
+      <%= f.text_field :name, :autofocus => true, class: 'form-control', :required => true %>
     </div>
     <div class="form-group">
-      <%= f.label :university %>
-      <%= f.text_field :university, class: 'form-control' %>
+      <%= f.label :affiliation %>
+      <%= f.text_field :university, class: 'form-control', :required => true %>
     </div>
     <div class="form-group">
       <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.email_field :email, class: 'form-control', :required => true, :type => "email" %>
     </div>
     <div class="form-group">
       <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.password_field :password, class: 'form-control', :required => true %>
     </div>
     <div class="form-group">
-      <%= f.label :confirmation %>
-      <%= f.password_field :confirmation, class: 'form-control' %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'form-control', :required => true %>
     </div>
      <%= f.submit 'Sign up', :class => 'button right' %>
   <% end %>
