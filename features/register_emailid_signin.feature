@@ -7,10 +7,10 @@ Feature: User Registration using Email Id
     Scenario: User registers and creates an account
         Given I am on the signup page
         And I fill in "Name" with "udit"
-        And I fill in "University" with "Auckland University of Technology"
+        And I fill in "user_university" with "Auckland University of Technology"
         And I fill in "Email" with "udit@serler.com"
         And I fill in "Password" with "abcdefgh"
-        And I fill in "Confirmation" with "abcdefgh"
+        And I fill in "user_password_confirmation" with "abcdefgh"
         When I press "Sign up"
         Then I am on the homepage
         And page should "alert-success" stating "Welcome! You have signed up successfully."
@@ -19,10 +19,10 @@ Feature: User Registration using Email Id
 #        Given I have an account with username "udit@serler.com"
         And I am on the signup page
         And I fill in "Name" with "udit"
-        And I fill in "University" with "Auckland University of Technology"
+        And I fill in "user_university" with "Auckland University of Technology"
         And I fill in "Email" with "udit@serler.com"
         And I fill in "Password" with "abcdefgh"
-        And I fill in "Confirmation" with "abcdefgh"
+        And I fill in "user_password_confirmation" with "abcdefgh"
         When I press "Sign up"
         Then page should "alert-failure" stating "Email has already been taken"
         
@@ -32,9 +32,19 @@ Feature: User Registration using Email Id
         And I fill in "Name" with "udit"
         And I fill in "Email" with "udi@udit.udi"
         And I fill in "Password" with "abc"
-        And I fill in "Confirmation" with "abc"
+        And I fill in "user_password_confirmation" with "abc"
         When I press "Sign up"
         Then page should have alert message "Password is too short "
+
+      Scenario: User registers with wrong password confirmation 
+        Given I am on the signup page
+        And I fill in "Name" with "udit"
+        And I fill in "Email" with "udi@udit.udi"
+        And I fill in "Password" with "abcdefghabcd"
+        And I fill in "user_password_confirmation" with "abcdefgh"
+        When I press "Sign up"
+        Then page should have alert message "Password confirmation doesn't match Password"        
+        
         
       Scenario: user is already registered and signs in with valid details
         Given I have an account with username "udit@serler.com"
@@ -52,5 +62,4 @@ Feature: User Registration using Email Id
         When I press "Sign in"
         Then page should have alert message "Invalid email or password."
         
-      
       

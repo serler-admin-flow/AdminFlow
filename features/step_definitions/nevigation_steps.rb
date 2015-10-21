@@ -101,9 +101,9 @@ Given(/^I have an account with username "(.*?)"$/) do |username|
   visit '/users/sign_up'
   fill_in('Name', :with => "John")
   fill_in('Email', :with => username)
-  fill_in('University', :with => "AUT university")
+  fill_in('user_university', :with => "AUT university")
   fill_in('Password', :with => username)
-  fill_in('Confirmation', :with => username)
+  fill_in('user_password_confirmation', :with => username)
   click_button("Sign up")
 #  current_path.should == path_to('homepage')
   click_link 'Sign out'
